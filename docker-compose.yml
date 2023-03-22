@@ -1,0 +1,18 @@
+version: '3'
+services:
+  nginx1:
+    image: nginx
+    container_name: nginx_first
+    ports:
+      - 8080:80
+    volumes:
+      - /root/dir1:/usr/share/nginx/html
+
+  nginx2:
+    image: nginx
+    container_name: nginx_second
+    ports:
+      - 9090:80
+    volumes:
+      - /root/dir2:/usr/share/nginx/html
+
